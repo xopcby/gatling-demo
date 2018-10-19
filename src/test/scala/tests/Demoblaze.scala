@@ -131,7 +131,6 @@ class Demoblaze extends Simulation {
                         .post( Value.apiCall + "/viewcart" )
                         .body( StringBody("""{"cookie":"${cookie}","flag":false}""" ) )
                         .asJson)
-                        //                        .check( Func.checkJson( "$..prod_id", "idInCart" ) ) )
                         .exec( Func.postIds( "${idsInCart}" ) )
                 }
                 .pause( Value.thinkTime )
